@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: "org.sonarqube"
+
+group = projectGroupId // obtained from gradle.properties, can be referenced by project.group
+// artifact id obtained from settings.gradle, can be referenced by project.name
+version = projectVersion // obtained from gradle.properties, can be referenced by project.version
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '3.8.1'
+}
